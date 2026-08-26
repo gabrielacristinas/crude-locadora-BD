@@ -1,0 +1,29 @@
+{
+  "name": "crude-locadora-bd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielacristinas/crude-locadora-BD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gabrielacristinas/crude-locadora-BD/issues"
+  },
+  "homepage": "https://github.com/gabrielacristinas/crude-locadora-BD#readme",
+  "dependencies": {
+    "express": "5.2.1",
+    "knex": "^3.3.0",
+    "sqlite3": "6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.14"
+  }
+}

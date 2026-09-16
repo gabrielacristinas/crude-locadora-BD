@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
     return knex.schema.table("filmes", (table) => {
-    table,dropColumn("genero_id")
+    table.dropColumn("genero_id")
 
     })
   
@@ -16,6 +16,6 @@ exports.up = function(knex) {
  */
 exports.down = function(knex) { 
     return knex.schema.table("filmes", (table)  => {
-    table,integer("genero_id")
+    table.integer("genero_id")
     })
 };

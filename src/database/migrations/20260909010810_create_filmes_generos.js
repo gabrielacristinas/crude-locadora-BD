@@ -9,17 +9,19 @@ exports.up = function(knex) {
   // Relações
     table.integer("filmes_id")
         .unsigned()
-        .notNullable
+        .notNullable()
         .references("id")
         .inTable("filmes")
         .onDelete("CASCADE")
     
     table.integer("genero_id")
         .unsigned()
-        .notNullable
+        .notNullable()
         .references("id")
         .inTable("generos")
-        
+         .onDelete("CASCADE")
+
+    table.timestamps(true, true)
 })
   
 };
@@ -29,5 +31,10 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
+    return knex.schema.dropTable("filmes_generos")
   
 };
+
+exports.config = {
+    transaction:false
+}
